@@ -10,10 +10,7 @@
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install htop vim tree cheese python3 dkms git make gcc libjpeg-dev ffmpeg vlc linux-image-generic libusb-1.0-0-dev
-sudo reboot
-uname -a
-sudo apt install linux-headers-x.xx.x-xx-generic
+sudo apt install htop vim tree cheese python3 dkms git make gcc libjpeg-dev ffmpeg vlc linux-image-generic libusb-1.0-0-dev linux-headers-generic
 sudo apt autoremove
 ```
 
@@ -42,7 +39,6 @@ cd ..
 cd ~/TCam/flirone-v4l2-tcam/
 make
 sudo cp -R ~/TCam/flirone-v4l2-tcam /usr/bin/
-rm ~/TCam/flirone-v4l2-tcam/flirone
 cd ..
 ```
 
@@ -73,8 +69,12 @@ ffmpeg -f v4l2 -r 9 -s 640x480 -i /dev/video3 thermal.avi
 ```
 
 ### Files and Folders
-* ~/TCam/scripts
-  * all develelpment scripts
+* flirone-v4l2-tcam/
+  * flir one driver, allow access to video stream on /dev/video2 and /dev/video3
+* scripts/
+  * include all development scripts
+* v4l2loopback/
+  * kernel module for virtual video
 * tcam.service
   * definition of service for systemd
 * tcam-start.sh
