@@ -10,9 +10,7 @@
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install htop vim tree cheese python3 dkms git make gcc libjpeg-dev ffmpeg vlc linux-image-generic libusb-1.0-0-dev 
-sudo reboot
-sudo apt install linux-headers-`uname -r`
+sudo apt install htop vim tree cheese python3 dkms git make gcc libjpeg-dev ffmpeg vlc linux-image-generic libusb-1.0-0-dev linux-headers-generic python3-opencv python3-numpy python3-matplotlib
 sudo apt autoremove
 ```
 
@@ -63,11 +61,16 @@ systemctl enable tcam
 systemctl disable tcam
 ```
 
-### Tests
+### use flirone without service
 ```
 sudo modprobe v4l2loopback exclusive_caps=0,0 video_nr=1,2,3
-/usr/bin/flirone-v4l2-tcam/flirone /usr/bin/flirone-v4l2-tcam/palettes/Iron2.raw
+sudo /usr/bin/flirone-v4l2-tcam/flirone /usr/bin/flirone-v4l2-tcam/palettes/Iron2.raw
+```
+
+### Tests
+```
 ffmpeg -f v4l2 -r 9 -s 640x480 -i /dev/video3 thermal.avi
+python3 ~/TCam/scripts/test1.py
 ```
 
 ### Files and Folders
