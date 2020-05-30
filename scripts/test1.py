@@ -2,14 +2,16 @@ import cv2
 #import numpy as np
 import os
 import time
+from pathlib import Path
 
-os.chdir('/home/ubuntu/webcam')
+home = str(Path.home())
+os.chdir(home)
 print('Working directory changed to: {}'.format(os.getcwd()))
 
 
 start_time = time.time()
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(3)
 
 # sirka
 #cap.set(3,1920)
@@ -25,7 +27,7 @@ n = 0
 
 while True:
     success, img = cap.read()
-    cv2.imshow('Video', img)
+    cv2.imshow('Termal', img)
 
     key = cv2.waitKey(1) & 0xFF
 

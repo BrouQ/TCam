@@ -10,7 +10,10 @@
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install htop vim tree cheese python3 dkms git make gcc libjpeg-dev ffmpeg vlc linux-image-generic libusb-1.0-0-dev linux-headers-generic python3-opencv python3-numpy python3-matplotlib
+sudo reboot
+
+sudo apt install htop vim tree cheese python3 dkms git make gcc libjpeg-dev ffmpeg vlc linux-image-generic libusb-1.0-0-dev python3-opencv python3-numpy python3-matplotlib
+sudo apt install --reinstall linux-headers-`uname -r`
 sudo apt autoremove
 ```
 
