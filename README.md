@@ -1,12 +1,12 @@
-# TCam (Threma Camera DIY)
-- thermal camera: FliroOne gen2, micro-usb
+# TCam (Thermal Camera DIY)
+- thermal camera: FlirOne gen2, micro-usb
 - platform: ubuntu 18.04 x64
 - conditions:
   - be sure there is no camera on /dev/video[1,2,3]
 
 ## install guide
 
-### Installing Prerequisites
+### Installing Prerequisities
 ```
 sudo apt update
 sudo apt upgrade
@@ -22,7 +22,7 @@ cd ~/TCam
 ```
 
 ### Install v4l2loopback
-- original at: git clone https://github.com/umlaeute/v4l2loopback.git
+- original at: https://github.com/umlaeute/v4l2loopback.git
 - no changes in project copy of folder
 ```
 cd ~/TCam/v4l2loopback/
@@ -33,7 +33,7 @@ cd ..
 ```
 
 ### Install flirone driver
-- original at: git clone https://github.com/fnoop/flirone-v4l2.git
+- original at: https://github.com/fnoop/flirone-v4l2.git
 - changed flirone-v4l2.c for this project
 ```
 cd ~/TCam/flirone-v4l2-tcam/
