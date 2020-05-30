@@ -1,0 +1,13 @@
+[Unit]
+Description=TCam start service, load v4l2loopback, run flir-one drive
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/tcam-start.sh
+
+[Install]
+WantedBy=multi-user.target

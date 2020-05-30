@@ -39,9 +39,10 @@ cd ..
 - original at: git clone https://github.com/fnoop/flirone-v4l2.git
 - changed flirone-v4l2.c for this project
 ```
-cd ~/TCam/flirone-v4l2/
+cd ~/TCam/flirone-v4l2-tcam/
 make
-sudo mv ~/TCam/flirone-v4l2 /usr/bin/
+sudo cp -R ~/TCam/flirone-v4l2-tcam /usr/bin/
+rm ~/TCam/flirone-v4l2-tcam/flirone
 cd ..
 ```
 
@@ -67,7 +68,7 @@ systemctl disable tcam
 ### Tests
 ```
 sudo modprobe v4l2loopback exclusive_caps=0,0 video_nr=1,2,3
-/usr/bin/flirone-v4l2/flirone /usr/bin/flirone-v4l2/palettes/Iron2.raw
+/usr/bin/flirone-v4l2-tcam/flirone /usr/bin/flirone-v4l2-tcam/palettes/Iron2.raw
 ffmpeg -f v4l2 -r 9 -s 640x480 -i /dev/video3 thermal.avi
 ```
 
@@ -83,6 +84,7 @@ ffmpeg -f v4l2 -r 9 -s 640x480 -i /dev/video3 thermal.avi
 ###  Git Help
 - https://wiki.debian.org/UsingGit
 - https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
+```
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
@@ -98,4 +100,4 @@ git checkout new-branch (presun do nove vetve)
 git checkout master (spatky do hlavni vetve)
 git show-branch
 git merge new-branch (marge to mastr)
-
+```
