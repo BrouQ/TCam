@@ -37,7 +37,7 @@ cd ..
 
 ### Install flirone driver
 - original at: https://github.com/fnoop/flirone-v4l2.git
-- changed flirone-v4l2.c for this project
+- changed src/flirone.c for this project
 ```
 cd ~/TCam/flirone-v4l2-tcam/
 make
