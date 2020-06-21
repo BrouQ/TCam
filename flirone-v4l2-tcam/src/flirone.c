@@ -331,7 +331,8 @@ void vframe(char ep[],char EP_error[], int r, int actual_length, unsigned char b
   fb_proc2 = malloc(160 * 128 * 3 ); // 8x8x8  Bit RGB buffer 
 
 //  int min = 0x10000, max = 0;
-  int max = 0x0f0a; // 40 deg
+  int max = 0x1100; //50 deg
+  //int max = 0x0f0a; // 40 deg
   int min = 0x0c49; // 25 deg
   float rms = 0;
 
