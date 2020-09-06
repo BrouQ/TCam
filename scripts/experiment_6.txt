@@ -1,0 +1,4 @@
+experiment 6
+- kamera cca 50cm od zdi, kouka na kuzi ve vzdalenosti 50cm
+- sonda cca 10cm od kamery, zabalena v kuzi, neni v zaberu kamery
+- odpojene napajeni kamery, testujeme stabilitu a delku provozu na baterii
